@@ -43,7 +43,7 @@ class HtmlParser extends StatefulWidget {
   final Html? root;
 
   HtmlParser({
-    required super.key,
+    super.key,
     required this.htmlData,
     required this.onLinkTap,
     required this.onAnchorTap,
