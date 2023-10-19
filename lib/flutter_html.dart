@@ -99,7 +99,7 @@ class Html extends StatefulWidget {
         super(key: key);
 
   /// A unique key for this Html widget to ensure uniqueness of anchors
-  final GlobalKey _anchorKey;
+  final GlobalKey? _anchorKey;
 
   /// The HTML data passed to the widget as a String
   final String? data;
