@@ -70,6 +70,8 @@ class Style {
   /// Default: normal
   List<FontFeature>? fontFeatureSettings;
 
+  List<FontVariation>? fontVariations;
+
   /// CSS attribute "`font-size`"
   ///
   /// Inherited: yes,
@@ -244,6 +246,7 @@ class Style {
     this.fontSize,
     this.fontStyle,
     this.fontWeight,
+    this.fontVariations,
     this.height,
     this.lineHeight,
     this.letterSpacing,
@@ -308,6 +311,7 @@ class Style {
       fontFamily: fontFamily,
       fontFamilyFallback: fontFamilyFallback,
       fontFeatures: fontFeatureSettings,
+      fontVariations: fontVariations,
       fontSize: fontSize?.value,
       fontStyle: fontStyle,
       fontWeight: fontWeight,
@@ -334,6 +338,7 @@ class Style {
       fontFamily: other.fontFamily,
       fontFamilyFallback: other.fontFamilyFallback,
       fontFeatureSettings: other.fontFeatureSettings,
+      fontVariations: other.fontVariations,
       fontSize: other.fontSize,
       fontStyle: other.fontStyle,
       fontWeight: other.fontWeight,
@@ -386,6 +391,7 @@ class Style {
       display: display == Display.none ? display : child.display,
       fontFamily: child.fontFamily ?? fontFamily,
       fontFamilyFallback: child.fontFamilyFallback ?? fontFamilyFallback,
+      fontVariations: child.fontVariations ?? fontVariations,
       fontFeatureSettings: child.fontFeatureSettings ?? fontFeatureSettings,
       fontSize: finalFontSize,
       fontStyle: child.fontStyle ?? fontStyle,
@@ -419,6 +425,7 @@ class Style {
     String? fontFamily,
     List<String>? fontFamilyFallback,
     List<FontFeature>? fontFeatureSettings,
+    List<FontVariation>? fontVariations,
     FontSize? fontSize,
     FontStyle? fontStyle,
     FontWeight? fontWeight,
@@ -461,6 +468,7 @@ class Style {
       fontFamily: fontFamily ?? this.fontFamily,
       fontFamilyFallback: fontFamilyFallback ?? this.fontFamilyFallback,
       fontFeatureSettings: fontFeatureSettings ?? this.fontFeatureSettings,
+      fontVariations: fontVariations ?? this.fontVariations,
       fontSize: fontSize ?? this.fontSize,
       fontStyle: fontStyle ?? this.fontStyle,
       fontWeight: fontWeight ?? this.fontWeight,
@@ -505,6 +513,7 @@ class Style {
       fontFamily: textStyle.fontFamily,
       fontFamilyFallback: textStyle.fontFamilyFallback,
       fontFeatureSettings: textStyle.fontFeatures,
+      fontVariations: textStyle.fontVariations,
       fontSize:
           textStyle.fontSize != null ? FontSize(textStyle.fontSize!) : null,
       fontStyle: textStyle.fontStyle,
